@@ -17,9 +17,9 @@ public class AutoTimeNotifier {
 
     private boolean mTurnedOn = false;
 
-    public AutoTimeNotifier(long mInterval) {
-        this.mInterval = mInterval;
-        mClock = new Clock(mInterval){
+    public AutoTimeNotifier(long interval) {
+        this.mInterval = interval;
+        mClock = new Clock(interval){
             @Override
             protected void onStart(long currentTimeMillis) {
                 List<ClockListener> listeners = (List<ClockListener>) mListeners.clone();
